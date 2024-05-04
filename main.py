@@ -18,7 +18,7 @@ def convert_integer(s):
 
 
 def button_click():
-    convert_integer(roman_entry.get())
+    convert_integer(roman_entry.get().upper())
 
 
 # UI
@@ -35,9 +35,15 @@ roman_entry = tk.Entry()
 roman_entry.focus()
 roman_entry.pack()
 
+space_label = tk.Label(root, text="")
+space_label.pack()
+
 # Çevirme Butonu
 send_button = tk.Button(root, text="Convert", command=button_click)
 send_button.pack()
+
+space_label = tk.Label(root, text="")
+space_label.pack()
 
 # Sonuç
 result_label = tk.Label(root, text="")
